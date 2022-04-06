@@ -33,7 +33,6 @@
     "lint": "prettier --check . && eslint .",
     "test": "xvfb-maybe cross-env TS_NODE_FILES=true mocha './tools/test-globber.ts'",
     "test:fast": "xvfb-maybe cross-env TEST_FAST_ONLY=1 TS_NODE_FILES=true mocha './tools/test-globber.ts'",
-    "postinstall": "rimraf node_modules/.bin/*.ps1 && ts-node tools/link-ts.ts"
   },
   "dependencies": {
     "@aws-sdk/abort-controller": "^3.29.0",
