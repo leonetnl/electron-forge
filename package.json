@@ -32,7 +32,8 @@
     "docs:deploy:ci": "ts-node tools/sync-readmes.ts && bolt docs && ts-node tools/copy-now.ts && cd docs && now --token $NOW_TOKEN && now alias --token $NOW_TOKEN",
     "lint": "prettier --check . && eslint .",
     "test": "xvfb-maybe cross-env TS_NODE_FILES=true mocha './tools/test-globber.ts'",
-    "test:fast": "xvfb-maybe cross-env TEST_FAST_ONLY=1 TS_NODE_FILES=true mocha './tools/test-globber.ts'"
+    "test:fast": "xvfb-maybe cross-env TEST_FAST_ONLY=1 TS_NODE_FILES=true mocha './tools/test-globber.ts'",
+    "postinstall": "ts-node tools/link-ts.ts"
   },
   "dependencies": {
     "@aws-sdk/abort-controller": "^3.29.0",
